@@ -78,11 +78,8 @@
       </div>
       <div class="hero-visual">
         <div class="phone" aria-label="Así se ve Mi Zoológico">
-          <div class="phone-screen" id="phoneShow">
-            <img src="img/juego.webp" alt="Un zoológico lleno de hábitats y visitantes" class="on">
-            <img src="img/tt2.webp" alt="Más de 100 animales" loading="lazy">
-            <img src="img/tt4.webp" alt="Sube de nivel y desbloquea animales" loading="lazy">
-            <img src="img/tt3.webp" alt="Visitantes con hambre, sed y ganas de ir al baño" loading="lazy">
+          <div class="phone-screen">
+            <video id="trailer" src="video/mi-zoologico.mp4" poster="video/poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Video del juego: recorrido por un zoológico lleno de animales y visitantes"></video>
           </div>
         </div>
         <img class="pop p1" src="img/animales/leon.webp" alt="" width="120" height="120">
@@ -272,7 +269,7 @@
         <a href="img/icono-512.png" download><img src="img/icono-256.webp" alt="" loading="lazy"><span>Ícono 512×512</span></a>
         <a href="img/portada.jpg" download><img src="img/portada.webp" alt="" loading="lazy"><span>Portada 1024×500</span></a>
         <a href="../descargas/soul-developer-logo.png" download><img src="../img/chispa-128.png" alt="" loading="lazy" class="contain"><span>Logo Soul Developer</span></a>
-        <a href="img/halloween.webp" download><img src="img/halloween.webp" alt="" loading="lazy"><span>Evento Halloween</span></a>
+        <a href="video/mi-zoologico.mp4" download><img src="video/poster.jpg" alt="" loading="lazy"><span>Video del juego (MP4, 18 s)</span></a>
       </div>
 
       <div class="press-contact">
@@ -311,9 +308,9 @@
 <script>
 (function () {
   var quieto = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  // Pantalla del teléfono: pasa capturas como un tráiler
-  var fotos = document.querySelectorAll('#phoneShow img'), i = 0;
-  if (!quieto) setInterval(function () { fotos[i].classList.remove('on'); i = (i + 1) % fotos.length; fotos[i].classList.add('on'); }, 3200);
+  // Video del teléfono: quieto si la persona prefiere menos movimiento
+  var trailer = document.getElementById('trailer');
+  if (quieto) { trailer.removeAttribute('autoplay'); trailer.pause(); trailer.controls = true; }
 
   // Filtro de animales
   var tabs = document.querySelectorAll('.zone-tabs button'), items = document.querySelectorAll('#zooGrid li');
