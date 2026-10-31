@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mi Zoológico · Juego gratis para Android</title>
+<meta name="description" content="Construye tu propio zoológico, cuida más de 100 animales y abre tu parque de diversiones. Gratis en Google Play, para toda la familia.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="🦁 Mi Zoológico: construye tu propio zoo">
+<meta property="og:description" content="Más de 100 animales, crías, visitantes y un parque de diversiones con 32 atracciones. Gratis en Google Play.">
+<meta property="og:image" content="https://souldevelopercompany.github.io/mi-zoologico/img/portada.jpg">
+<meta property="og:url" content="https://souldevelopercompany.github.io/mi-zoologico/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/icono.png">
+<style>
+:root { --verde: #2f9e5b; --verde-o: #1f6b3d; --texto: #23302a; --suave: #5d6b63; --fondo: #f3f9ee; --papel: #fff; }
+* { box-sizing: border-box; }
+body { margin: 0; font: 17px/1.55 system-ui, "Segoe UI", Roboto, sans-serif; color: var(--texto); background: var(--fondo); }
+.hero { background: linear-gradient(180deg, #7fd3ff 0%, #bfeaff 45%, #a9e37f 75%, #5aa846 100%); padding: 40px 16px 56px; text-align: center; }
+.hero img.icono { width: 96px; height: 96px; border-radius: 22px; box-shadow: 0 8px 20px rgba(0,0,0,.2); }
+h1 { margin: 14px 0 6px; font-size: clamp(2rem, 8vw, 3rem); color: #fff; -webkit-text-stroke: 2px #2f7a45; paint-order: stroke fill; text-shadow: 0 4px 0 #2f7a45; }
+.hero p { margin: 0 auto 22px; max-width: 520px; color: #17391f; font-weight: 600; }
+.play { display: inline-flex; align-items: center; gap: 10px; padding: 12px 22px; border-radius: 14px; background: #111; color: #fff; text-decoration: none; font-weight: 700; box-shadow: 0 6px 16px rgba(0,0,0,.25); }
+.play small { display: block; font-size: .7rem; font-weight: 500; opacity: .85; }
+.play svg { width: 28px; height: 28px; }
+main { max-width: 960px; margin: 0 auto; padding: 0 16px 48px; }
+.capturas { display: flex; gap: 14px; overflow-x: auto; padding: 0 4px 12px; margin-top: -32px; scroll-snap-type: x mandatory; }
+.capturas img { width: 200px; flex: 0 0 auto; border-radius: 18px; box-shadow: 0 8px 20px rgba(0,0,0,.18); scroll-snap-align: center; background: #fff; }
+.rasgos { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 28px 0; }
+.rasgo { background: var(--papel); border-radius: 18px; padding: 16px 18px; box-shadow: 0 3px 0 #e2ecd9; }
+.rasgo b { display: block; font-size: 1.05rem; margin-bottom: 4px; }
+.rasgo span { color: var(--suave); font-size: .95rem; }
+.familia { background: #fffbea; border: 2px solid #ffe7a3; border-radius: 18px; padding: 16px 18px; color: #5a4a1a; }
+.cta { text-align: center; margin: 36px 0 8px; }
+footer { text-align: center; color: var(--suave); font-size: .85rem; padding: 0 16px 32px; }
+footer a { color: var(--verde-o); }
+</style>
+</head>
+<body>
+<header class="hero">
+  <img class="icono" src="img/icono.png" alt="Ícono de Mi Zoológico" width="96" height="96">
+  <h1>Mi Zoológico</h1>
+  <p>Construye tu propio zoo, cuida más de 100 animales adorables y abre tu parque de diversiones. ¡Gratis para toda la familia!</p>
+  <a class="play" href="https://play.google.com/store/apps/details?id=com.souldevelopercompany.mizoologico&referrer=utm_source%3Dweb%26utm_medium%3Dlanding">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34a853" d="M3.6 1.8 13.4 12l-9.8 10.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1z"/><path fill="#fbbc04" d="m16.8 8.6-3.4 3.4 3.4 3.4 3.8-2.2c.9-.5.9-1.9 0-2.4z"/><path fill="#4285f4" d="M3.6 1.8c.3-.2.8-.2 1.2 0l12 6.8-3.4 3.4z"/><path fill="#ea4335" d="m13.4 12 3.4 3.4-12 6.8c-.4.2-.9.2-1.2 0z"/></svg>
+    <span><small>DISPONIBLE EN</small>Google Play</span>
+  </a>
+</header>
+<main>
+  <div class="capturas">
+    <img src="img/captura-1.webp" alt="Vista del zoológico con hábitats y visitantes" width="200" loading="lazy">
+    <img src="img/captura-3.webp" alt="Animales en sus hábitats ganando dinero" width="200" loading="lazy">
+    <img src="img/captura-2.webp" alt="Panel de un hábitat" width="200" loading="lazy">
+    <img src="img/captura-4.webp" alt="Subida de nivel con nuevos animales" width="200" loading="lazy">
+  </div>
+  <section class="rasgos">
+    <div class="rasgo"><b>🐘 Más de 100 especies</b><span>Leones, pandas, pingüinos, unicornios, dragones… ¡y sus crías!</span></div>
+    <div class="rasgo"><b>🎡 Parque de diversiones</b><span>32 atracciones animadas: montaña rusa, rueda de la fortuna, carrusel…</span></div>
+    <div class="rasgo"><b>🌿 Construye a tu manera</b><span>Caminos, hábitats, tiendas, adornos y zonas temáticas.</span></div>
+    <div class="rasgo"><b>🎃 Temporadas</b><span>Halloween y Navidad con adornos únicos y eventos especiales.</span></div>
+    <div class="rasgo"><b>🎯 Misiones y eventos</b><span>Retos diarios, excursiones escolares, olas de calor y premios con racha.</span></div>
+    <div class="rasgo"><b>📴 Sin internet</b><span>Juega donde quieras; tu partida se guarda en el teléfono.</span></div>
+  </section>
+  <p class="familia">👨‍👩‍👧 <b>Pensado para toda la familia.</b> Anuncios aptos para niños, videos con premio siempre opcionales y compras de pago único, sin cajas sorpresa con dinero real.</p>
+  <div class="cta">
+    <a class="play" href="https://play.google.com/store/apps/details?id=com.souldevelopercompany.mizoologico&referrer=utm_source%3Dweb%26utm_medium%3Dlanding_abajo"><span><small>DESCARGAR GRATIS EN</small>Google Play</span></a>
+  </div>
+</main>
+<footer>
+  Hecho con cariño por <b>Soul Developer Company</b> ·
+  <a href="https://souldevelopercompany.github.io/mi-zoologico-privacidad/">Política de privacidad</a> ·
+  <a href="mailto:souldevelopercompany@gmail.com">Contacto</a>
+</footer>
+</body>
+</html>

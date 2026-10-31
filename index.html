@@ -1,75 +1,460 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mi Zoológico · Juego gratis para Android</title>
-<meta name="description" content="Construye tu propio zoológico, cuida más de 100 animales y abre tu parque de diversiones. Gratis en Google Play, para toda la familia.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="🦁 Mi Zoológico: construye tu propio zoo">
-<meta property="og:description" content="Más de 100 animales, crías, visitantes y un parque de diversiones con 32 atracciones. Gratis en Google Play.">
-<meta property="og:image" content="https://souldevelopercompany.github.io/img/portada.jpg">
-<meta property="og:url" content="https://souldevelopercompany.github.io/">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="img/icono.png">
-<style>
-:root { --verde: #2f9e5b; --verde-o: #1f6b3d; --texto: #23302a; --suave: #5d6b63; --fondo: #f3f9ee; --papel: #fff; }
-* { box-sizing: border-box; }
-body { margin: 0; font: 17px/1.55 system-ui, "Segoe UI", Roboto, sans-serif; color: var(--texto); background: var(--fondo); }
-.hero { background: linear-gradient(180deg, #7fd3ff 0%, #bfeaff 45%, #a9e37f 75%, #5aa846 100%); padding: 40px 16px 56px; text-align: center; }
-.hero img.icono { width: 96px; height: 96px; border-radius: 22px; box-shadow: 0 8px 20px rgba(0,0,0,.2); }
-h1 { margin: 14px 0 6px; font-size: clamp(2rem, 8vw, 3rem); color: #fff; -webkit-text-stroke: 2px #2f7a45; paint-order: stroke fill; text-shadow: 0 4px 0 #2f7a45; }
-.hero p { margin: 0 auto 22px; max-width: 520px; color: #17391f; font-weight: 600; }
-.play { display: inline-flex; align-items: center; gap: 10px; padding: 12px 22px; border-radius: 14px; background: #111; color: #fff; text-decoration: none; font-weight: 700; box-shadow: 0 6px 16px rgba(0,0,0,.25); }
-.play small { display: block; font-size: .7rem; font-weight: 500; opacity: .85; }
-.play svg { width: 28px; height: 28px; }
-main { max-width: 960px; margin: 0 auto; padding: 0 16px 48px; }
-.capturas { display: flex; gap: 14px; overflow-x: auto; padding: 0 4px 12px; margin-top: -32px; scroll-snap-type: x mandatory; }
-.capturas img { width: 200px; flex: 0 0 auto; border-radius: 18px; box-shadow: 0 8px 20px rgba(0,0,0,.18); scroll-snap-align: center; background: #fff; }
-.rasgos { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 28px 0; }
-.rasgo { background: var(--papel); border-radius: 18px; padding: 16px 18px; box-shadow: 0 3px 0 #e2ecd9; }
-.rasgo b { display: block; font-size: 1.05rem; margin-bottom: 4px; }
-.rasgo span { color: var(--suave); font-size: .95rem; }
-.familia { background: #fffbea; border: 2px solid #ffe7a3; border-radius: 18px; padding: 16px 18px; color: #5a4a1a; }
-.cta { text-align: center; margin: 36px 0 8px; }
-footer { text-align: center; color: var(--suave); font-size: .85rem; padding: 0 16px 32px; }
-footer a { color: var(--verde-o); }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Soul Developer · Estudio de videojuegos</title>
+  <meta name="description" content="Soul Developer es un estudio independiente de videojuegos para móvil. Creadores de Mi Zoológico, Crónicas de Vaelor, Idle Hotel Tycoon y Patitas.">
+  <meta name="theme-color" content="#130A09">
+  <meta property="og:title" content="Soul Developer">
+  <meta property="og:description" content="Le ponemos alma a cada juego. Estudio independiente de videojuegos para móvil.">
+  <meta property="og:image" content="https://souldevelopercompany.github.io/img/zoo-portada.webp">
+  <meta property="og:url" content="https://souldevelopercompany.github.io/">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Figtree:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<header class="hero">
-  <img class="icono" src="img/icono.png" alt="Ícono de Mi Zoológico" width="96" height="96">
-  <h1>Mi Zoológico</h1>
-  <p>Construye tu propio zoo, cuida más de 100 animales adorables y abre tu parque de diversiones. ¡Gratis para toda la familia!</p>
-  <a class="play" href="https://play.google.com/store/apps/details?id=com.souldevelopercompany.mizoologico&referrer=utm_source%3Dweb%26utm_medium%3Dlanding">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34a853" d="M3.6 1.8 13.4 12l-9.8 10.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1z"/><path fill="#fbbc04" d="m16.8 8.6-3.4 3.4 3.4 3.4 3.8-2.2c.9-.5.9-1.9 0-2.4z"/><path fill="#4285f4" d="M3.6 1.8c.3-.2.8-.2 1.2 0l12 6.8-3.4 3.4z"/><path fill="#ea4335" d="m13.4 12 3.4 3.4-12 6.8c-.4.2-.9.2-1.2 0z"/></svg>
-    <span><small>DISPONIBLE EN</small>Google Play</span>
-  </a>
+
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="topbar" id="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="#inicio" aria-label="Soul Developer, inicio">
+      <img src="img/chispa-128.png" alt="" width="40" height="40">
+      <span class="brand-name">Soul<b>Developer</b></span>
+    </a>
+    <nav class="menu" id="menu" aria-label="Principal">
+      <a href="#juegos">Juegos</a>
+      <a href="#chispa">Chispa</a>
+      <a href="#estudio">Estudio</a>
+      <a href="#prensa">Prensa</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="btn btn-fire btn-sm hide-sm" href="https://play.google.com/store/apps/details?id=com.souldevelopercompany.mizoologico" target="_blank" rel="noopener">Jugar gratis</a>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  </div>
 </header>
-<main>
-  <div class="capturas">
-    <img src="img/captura-1.webp" alt="Vista del zoológico con hábitats y visitantes" width="200" loading="lazy">
-    <img src="img/captura-3.webp" alt="Animales en sus hábitats ganando dinero" width="200" loading="lazy">
-    <img src="img/captura-2.webp" alt="Panel de un hábitat" width="200" loading="lazy">
-    <img src="img/captura-4.webp" alt="Subida de nivel con nuevos animales" width="200" loading="lazy">
-  </div>
-  <section class="rasgos">
-    <div class="rasgo"><b>🐘 Más de 100 especies</b><span>Leones, pandas, pingüinos, unicornios, dragones… ¡y sus crías!</span></div>
-    <div class="rasgo"><b>🎡 Parque de diversiones</b><span>32 atracciones animadas: montaña rusa, rueda de la fortuna, carrusel…</span></div>
-    <div class="rasgo"><b>🌿 Construye a tu manera</b><span>Caminos, hábitats, tiendas, adornos y zonas temáticas.</span></div>
-    <div class="rasgo"><b>🎃 Temporadas</b><span>Halloween y Navidad con adornos únicos y eventos especiales.</span></div>
-    <div class="rasgo"><b>🎯 Misiones y eventos</b><span>Retos diarios, excursiones escolares, olas de calor y premios con racha.</span></div>
-    <div class="rasgo"><b>📴 Sin internet</b><span>Juega donde quieras; tu partida se guarda en el teléfono.</span></div>
+
+<main id="contenido">
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <canvas class="embers" id="embers" aria-hidden="true"></canvas>
+    <div class="wrap hero-in">
+      <div class="hero-copy">
+        <p class="eyebrow">Estudio independiente de videojuegos · Hecho en Colombia</p>
+        <h1>Le ponemos <span class="hl">alma</span> a cada juego.</h1>
+        <p class="lead">Creamos juegos para móvil que se entienden en segundos y dan ganas de volver mañana. Zoológicos llenos de vida, hoteles que nunca duermen, mascotas que crecen contigo y un reino entero por explorar.</p>
+        <div class="cta-row">
+          <a class="btn btn-fire" href="#juegos">Ver nuestros juegos</a>
+          <a class="btn btn-ghost" href="#estudio">Conoce el estudio</a>
+        </div>
+        <ul class="hero-stats" aria-label="Soul Developer en números">
+          <li><b>4</b><span>juegos</span></li>
+          <li><b>100+</b><span>especies en Mi Zoológico</span></li>
+          <li><b>9</b><span>jefes en Vaelor</span></li>
+        </ul>
+      </div>
+      <div class="hero-art">
+        <div class="halo" aria-hidden="true"></div>
+        <img class="chispa-big" src="img/chispa.webp" alt="Chispa, la mascota de fuego de Soul Developer" width="640" height="640">
+        <div class="bubble">¡Hola! Soy <b>Chispa</b>.</div>
+      </div>
+    </div>
   </section>
-  <p class="familia">👨‍👩‍👧 <b>Pensado para toda la familia.</b> Anuncios aptos para niños, videos con premio siempre opcionales y compras de pago único, sin cajas sorpresa con dinero real.</p>
-  <div class="cta">
-    <a class="play" href="https://play.google.com/store/apps/details?id=com.souldevelopercompany.mizoologico&referrer=utm_source%3Dweb%26utm_medium%3Dlanding_abajo"><span><small>DESCARGAR GRATIS EN</small>Google Play</span></a>
-  </div>
+
+  <!-- DESTACADOS -->
+  <section class="featured" aria-label="Juegos destacados">
+    <div class="wrap">
+      <div class="slider" id="slider">
+        <div class="slides">
+          <article class="slide is-on" data-accent="zoo">
+            <img src="img/zoo-portada.webp" alt="Mi Zoológico" loading="eager">
+            <div class="slide-cap">
+              <span class="pill pill-live">Disponible en Google Play</span>
+              <h2>Mi Zoológico</h2>
+              <p>Construye el zoo más tierno del mundo y abre tu propio parque de diversiones.</p>
+              <a class="btn btn-fire btn-sm" href="#zoologico">Descubrir</a>
+            </div>
+          </article>
+          <article class="slide" data-accent="vaelor">
+            <img src="img/vaelor-portada.webp" alt="Crónicas de Vaelor" loading="lazy">
+            <div class="slide-cap">
+              <span class="pill">Próximamente</span>
+              <h2>Crónicas de Vaelor</h2>
+              <p>Un RPG de acción con nueve regiones, nueve jefes y Chispa a tu lado.</p>
+              <a class="btn btn-fire btn-sm" href="#vaelor">Descubrir</a>
+            </div>
+          </article>
+          <article class="slide" data-accent="hotel">
+            <img src="img/hotel-portada.webp" alt="Idle Hotel Tycoon" loading="lazy">
+            <div class="slide-cap">
+              <span class="pill">Próximamente</span>
+              <h2>Idle Hotel Tycoon</h2>
+              <p>De tres habitaciones a un imperio hotelero por toda Colombia.</p>
+              <a class="btn btn-fire btn-sm" href="#hotel">Descubrir</a>
+            </div>
+          </article>
+          <article class="slide" data-accent="patitas">
+            <img src="img/patitas-portada.webp" alt="Patitas" loading="lazy">
+            <div class="slide-cap">
+              <span class="pill">Próximamente</span>
+              <h2>Patitas</h2>
+              <p>Adopta una mascota, críala desde bebé y compite con otros jugadores.</p>
+              <a class="btn btn-fire btn-sm" href="#patitas">Descubrir</a>
+            </div>
+          </article>
+        </div>
+        <button class="sl-arrow prev" aria-label="Juego anterior">‹</button>
+        <button class="sl-arrow next" aria-label="Juego siguiente">›</button>
+        <div class="dots" role="tablist" aria-label="Elegir juego destacado"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JUEGOS: GRID -->
+  <section class="sec" id="juegos">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Catálogo</p>
+        <h2>Nuestros juegos</h2>
+        <p class="sec-sub">Cuatro mundos distintos, una misma forma de hacer las cosas: con cariño, sin prisas y pensando en quien juega.</p>
+      </div>
+      <div class="cards">
+        <a class="card" href="#zoologico" style="--acc:var(--zoo)">
+          <div class="card-art"><img src="img/zoo-portada.webp" alt="" loading="lazy"></div>
+          <div class="card-body">
+            <img class="card-icon" src="img/zoo-icono.webp" alt="" width="72" height="72" loading="lazy">
+            <div>
+              <h3>Mi Zoológico</h3>
+              <p class="card-genre">Simulación · Construcción</p>
+            </div>
+            <span class="pill pill-live">Disponible</span>
+          </div>
+        </a>
+        <a class="card" href="#vaelor" style="--acc:var(--vae)">
+          <div class="card-art"><img src="img/vaelor-portada.webp" alt="" loading="lazy"></div>
+          <div class="card-body">
+            <img class="card-icon" src="img/vaelor-icono.webp" alt="" width="72" height="72" loading="lazy">
+            <div>
+              <h3>Crónicas de Vaelor</h3>
+              <p class="card-genre">RPG de acción · Aventura</p>
+            </div>
+            <span class="pill">Próximamente</span>
+          </div>
+        </a>
+        <a class="card" href="#hotel" style="--acc:var(--hot)">
+          <div class="card-art"><img src="img/hotel-portada.webp" alt="" loading="lazy"></div>
+          <div class="card-body">
+            <img class="card-icon" src="img/hotel-icono.webp" alt="" width="72" height="72" loading="lazy">
+            <div>
+              <h3>Idle Hotel Tycoon</h3>
+              <p class="card-genre">Idle · Tycoon</p>
+            </div>
+            <span class="pill">Próximamente</span>
+          </div>
+        </a>
+        <a class="card" href="#patitas" style="--acc:var(--paw)">
+          <div class="card-art"><img src="img/patitas-portada.webp" alt="" loading="lazy"></div>
+          <div class="card-body">
+            <img class="card-icon" src="img/patitas-icono.webp" alt="" width="72" height="72" loading="lazy">
+            <div>
+              <h3>Patitas</h3>
+              <p class="card-genre">Mascota virtual · Casual</p>
+            </div>
+            <span class="pill">Próximamente</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOWCASE: MI ZOOLÓGICO -->
+  <section class="show" id="zoologico" style="--acc:var(--zoo)">
+    <div class="wrap show-in">
+      <div class="show-info">
+        <div class="show-title">
+          <img src="img/zoo-icono.webp" alt="" width="84" height="84" loading="lazy">
+          <div><p class="eyebrow">Simulación · Construcción</p><h2>Mi Zoológico</h2></div>
+        </div>
+        <p class="show-lead">Empiezas con un terreno de césped y un poco de dinero. Traza caminos, construye hábitats y llénalos de animales adorables. Mira cómo los visitantes pasean, compran palomitas y vuelven a casa felices.</p>
+        <ul class="feat">
+          <li><b>Más de 100 especies</b> de la sabana a los dinosaurios, con unicornios, dragones y fénix.</li>
+          <li><b>Centro de cría</b>: junta macho y hembra y espera a que nazcan los bebés.</li>
+          <li><b>Parque de diversiones</b> con 32 atracciones animadas.</li>
+          <li><b>Eventos de temporada</b> como Halloween y Navidad.</li>
+        </ul>
+        <div class="facts">
+          <div><span>Plataforma</span><b>Android 7.0+</b></div>
+          <div><span>Precio</span><b>Gratis</b></div>
+          <div><span>Conexión</span><b>Juega sin internet</b></div>
+        </div>
+        <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.souldevelopercompany.mizoologico" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2.5v19l10.2-9.5L4 2.5z" fill="#34A853"/><path d="M17.6 8.8 4 2.5l10.2 9.5 3.4-3.2z" fill="#FBBC04"/><path d="M17.6 15.2 14.2 12 4 21.5l13.6-6.3z" fill="#EA4335"/><path d="m21 12-3.4-3.2-3.4 3.2 3.4 3.2L21 12z" fill="#4285F4"/></svg>
+          <span><small>Disponible en</small>Google Play</span>
+        </a>
+        <a class="more-link" href="mi-zoologico/">Ver la página de Mi Zoológico →</a>
+      </div>
+      <div class="shots shots-tall" data-gallery>
+        <img src="img/zoo-tt1.webp" alt="Mi Zoológico: hecho por un solo desarrollador" loading="lazy">
+        <img src="img/zoo-tt2.webp" alt="Mi Zoológico: más de 100 animales" loading="lazy">
+        <img src="img/zoo-captura.webp" alt="Vista del zoológico con visitantes" loading="lazy">
+        <img src="img/zoo-tt3.webp" alt="Los visitantes tienen necesidades" loading="lazy">
+        <img src="img/zoo-tt4.webp" alt="Sube de nivel y desbloquea animales" loading="lazy">
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="event-strip" data-gallery>
+        <img src="img/zoo-halloween.webp" alt="Evento de Halloween en Mi Zoológico" loading="lazy">
+        <img src="img/zoo-navidad.webp" alt="Evento de Navidad en Mi Zoológico" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOWCASE: VAELOR -->
+  <section class="show show-dark" id="vaelor" style="--acc:var(--vae)">
+    <div class="wrap">
+      <div class="show-title center">
+        <img src="img/vaelor-icono.webp" alt="" width="84" height="84" loading="lazy">
+        <div><p class="eyebrow">RPG de acción · Aventura</p><h2>Crónicas de Vaelor</h2></div>
+      </div>
+      <p class="show-lead center">Hace cien años, el rey Morvath forjó la Corona de Ascuas para proteger Vaelor, y la corona lo corrompió. Ahora el Rey Caído despierta, y tú despiertas sin recuerdos en Aldea Brisaclara con un arma en la mano.</p>
+
+      <div class="cinema" data-gallery>
+        <img class="cinema-main" id="cinemaMain" src="img/vaelor-1.webp" alt="Chispa nunca te deja solo" loading="lazy">
+        <div class="cinema-thumbs" role="list">
+          <button role="listitem" class="is-on" data-src="img/vaelor-1.webp" data-alt="Chispa nunca te deja solo"><img src="img/vaelor-1.webp" alt="" loading="lazy"></button>
+          <button role="listitem" data-src="img/vaelor-2.webp" data-alt="Cuatro clases, mil combos"><img src="img/vaelor-2.webp" alt="" loading="lazy"></button>
+          <button role="listitem" data-src="img/vaelor-3.webp" data-alt="Jefes legendarios"><img src="img/vaelor-3.webp" alt="" loading="lazy"></button>
+          <button role="listitem" data-src="img/vaelor-4.webp" data-alt="Noches que esconden peligros"><img src="img/vaelor-4.webp" alt="" loading="lazy"></button>
+          <button role="listitem" data-src="img/vaelor-5.webp" data-alt="Sube de nivel y hazte leyenda"><img src="img/vaelor-5.webp" alt="" loading="lazy"></button>
+          <button role="listitem" data-src="img/vaelor-6.webp" data-alt="Cofres, secretos y botín"><img src="img/vaelor-6.webp" alt="" loading="lazy"></button>
+        </div>
+      </div>
+
+      <div class="numbers">
+        <div><b>9</b><span>regiones en dos actos</span></div>
+        <div><b>9</b><span>jefes legendarios</span></div>
+        <div><b>37</b><span>monstruos con táctica propia</span></div>
+        <div><b>55</b><span>niveles de progresión</span></div>
+        <div><b>80</b><span>cofres escondidos</span></div>
+      </div>
+      <div class="three">
+        <div><h3>Tres clases</h3><p>Montaraz, Nigromante y Gólem. Cada una con un poder especial que evoluciona cada 5 niveles.</p></div>
+        <div><h3>Combate con ritmo</h3><p>Encadena combos, remata con el tercer golpe y esquiva cuando el jefe anuncia su ataque.</p></div>
+        <div><h3>Un reino vivo</h3><p>Ciclo de día y noche, clima propio por región, fogatas y una aldea que crece con cada misión.</p></div>
+      </div>
+      <p class="soon">Próximamente en Google Play</p>
+    </div>
+  </section>
+
+  <!-- SHOWCASE: HOTEL -->
+  <section class="show" id="hotel" style="--acc:var(--hot)">
+    <div class="wrap show-in reverse">
+      <div class="show-info">
+        <div class="show-title">
+          <img src="img/hotel-icono.webp" alt="" width="84" height="84" loading="lazy">
+          <div><p class="eyebrow">Idle · Tycoon</p><h2>Idle Hotel Tycoon</h2></div>
+        </div>
+        <p class="show-lead">Convierte un hotel de tres habitaciones en un rascacielos de lujo. Al principio registras huéspedes, mueves el ascensor y limpias cuartos con un toque. Después contratas gerentes y el hotel trabaja solo, incluso sin conexión.</p>
+        <ul class="feat">
+          <li><b>Hoteles por toda Colombia</b>, cada ciudad con su propio estilo.</li>
+          <li><b>Gerentes coleccionables</b> en cuatro rarezas, hasta ×2,5 de velocidad.</li>
+          <li><b>Penthouse y hotel submarino</b> en el mar Caribe.</li>
+          <li><b>Premios diarios</b> y huéspedes VIP.</li>
+        </ul>
+        <div class="facts">
+          <div><span>Plataforma</span><b>Android 7.0+</b></div>
+          <div><span>Idiomas</span><b>Español e inglés</b></div>
+          <div><span>Estado</span><b>Próximamente</b></div>
+        </div>
+      </div>
+      <div class="shots shots-tall" data-gallery>
+        <img src="img/hotel-1-mapa.webp" alt="Abre hoteles por toda Colombia" loading="lazy">
+        <img src="img/hotel-2-hotel.webp" alt="Construye el hotel de tus sueños" loading="lazy">
+        <img src="img/hotel-3-lobby.webp" alt="Cada ciudad con su propio estilo" loading="lazy">
+        <img src="img/hotel-4-penthouse.webp" alt="Corona tu hotel con un penthouse" loading="lazy">
+        <img src="img/hotel-5-submarino.webp" alt="Un hotel bajo el mar Caribe" loading="lazy">
+        <img src="img/hotel-6-gerente.webp" alt="Contrata gerentes legendarios" loading="lazy">
+        <img src="img/hotel-7-diario.webp" alt="Premios cada día y huéspedes VIP" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOWCASE: PATITAS -->
+  <section class="show" id="patitas" style="--acc:var(--paw)">
+    <div class="wrap show-in">
+      <div class="show-info">
+        <div class="show-title">
+          <img src="img/patitas-icono.webp" alt="" width="84" height="84" loading="lazy">
+          <div><p class="eyebrow">Mascota virtual · Casual</p><h2>Patitas</h2></div>
+        </div>
+        <p class="show-lead">Elige entre perro, gato, conejo, loro, tortuga o hámster, ponle nombre y acompáñalo mientras crece: bebé, cachorro, juvenil, adulto y senior. Cada mascota es única y hereda los rasgos de sus padres.</p>
+        <ul class="feat">
+          <li><b>Cuídala de verdad</b>: comida, baño, caricias y siestas.</li>
+          <li><b>Seis minijuegos</b> que se desbloquean según la etapa.</li>
+          <li><b>Compite</b> en agilidad, belleza y shows de trucos.</li>
+          <li><b>Parque en línea</b> para saludar a las mascotas de otros jugadores.</li>
+        </ul>
+        <div class="facts">
+          <div><span>Mascotas</span><b>6 especies</b></div>
+          <div><span>Etapas</span><b>5, de bebé a senior</b></div>
+          <div><span>Estado</span><b>Próximamente</b></div>
+        </div>
+      </div>
+      <div class="shots shots-tall" data-gallery>
+        <img src="img/patitas-01-casa.webp" alt="Toby en su casa" loading="lazy">
+        <img src="img/patitas-02-aprende.webp" alt="Estado y aprendizaje de la mascota" loading="lazy">
+        <img src="img/patitas-03-juegos.webp" alt="Minijuegos de Patitas" loading="lazy">
+        <img src="img/patitas-04-atrapa.webp" alt="Minijuego Atrapa golosinas" loading="lazy">
+        <img src="img/patitas-05-saltarin.webp" alt="Minijuego Saltarín" loading="lazy">
+        <img src="img/patitas-06-tienda.webp" alt="Tienda de decoración" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- CHISPA -->
+  <section class="chispa-sec" id="chispa">
+    <div class="wrap chispa-in">
+      <div class="chispa-pic">
+        <img src="img/chispa.webp" alt="Chispa" loading="lazy" width="640" height="640">
+      </div>
+      <div>
+        <p class="eyebrow">Nuestra mascota</p>
+        <h2>Conoce a Chispa</h2>
+        <p class="big">Chispa es una pequeña llama curiosa, un poco despistada y muy leal. Es la cara de Soul Developer y el alma que intentamos meter en cada juego.</p>
+        <p>Nació como la compañera del héroe en <a href="#vaelor">Crónicas de Vaelor</a>: lucha a tu lado, encuentra cofres escondidos, se asusta ante los jefes y se ríe si la tocas. Evoluciona cada 10 niveles y le salen alas, ascuas que orbitan y una cresta de fuego. También se asoma de vez en cuando en nuestros otros juegos. Búscala.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESTUDIO -->
+  <section class="sec studio" id="estudio">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">La compañía</p>
+        <h2>Soul Developer Company</h2>
+        <p class="sec-sub">Somos un estudio independiente colombiano. Diseñamos, programamos, dibujamos y publicamos nuestros propios juegos, de la primera idea a la ficha de Google Play.</p>
+      </div>
+
+      <div class="mv">
+        <article class="mv-card mision">
+          <span class="mv-tag">Misión</span>
+          <p>Crear videojuegos para móvil que cualquier persona entienda en segundos y quiera volver a abrir mañana. Los hacemos divertidos, justos con quien juega y ligeros para funcionar en cualquier teléfono, cuidando cada detalle como si fuera el único juego que vamos a publicar.</p>
+        </article>
+        <article class="mv-card vision">
+          <span class="mv-tag">Visión</span>
+          <p>Ser en 2030 el estudio independiente de referencia en Latinoamérica para juegos casuales y de aventura en móvil. Queremos un catálogo que acompañe a millones de jugadores y una mascota, Chispa, que la gente reconozca en cualquier parte del mundo.</p>
+        </article>
+      </div>
+
+      <h3 class="values-title">Lo que nos mueve</h3>
+      <ul class="values">
+        <li><span class="v-ico" aria-hidden="true">✦</span><h4>Alma en los detalles</h4><p>Una animación al tocar, un sonido al acertar, un animal que bosteza. Lo pequeño es lo que se recuerda.</p></li>
+        <li><span class="v-ico" aria-hidden="true">♥</span><h4>Respeto por quien juega</h4><p>Partidas cortas, progreso que no se pierde y nada de trampas para obligar a pagar.</p></li>
+        <li><span class="v-ico" aria-hidden="true">◎</span><h4>Juegos para todos</h4><p>Desde niños cuidando su primera mascota hasta quien busca un jefe difícil. Todos deben poder entrar.</p></li>
+        <li><span class="v-ico" aria-hidden="true">↻</span><h4>Mejorar cada semana</h4><p>Escuchamos a los jugadores, medimos y pulimos. Un juego publicado es un juego que sigue creciendo.</p></li>
+      </ul>
+
+      <div class="how">
+        <div><b>Idea</b><span>Un concepto que se explica en una frase.</span></div>
+        <div><b>Prototipo</b><span>Jugable en días, probado en teléfonos reales.</span></div>
+        <div><b>Pulido</b><span>Arte, sonido y sensación de juego.</span></div>
+        <div><b>Lanzamiento</b><span>Google Play, con pruebas cerradas antes.</span></div>
+        <div><b>Vida</b><span>Eventos de temporada y actualizaciones.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRENSA -->
+  <section class="sec press" id="prensa">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Kit de prensa</p>
+        <h2>Prensa y creadores</h2>
+        <p class="sec-sub">¿Vas a escribir sobre nosotros o a jugar en directo? Descarga logos e imágenes oficiales. Si necesitas claves o más material, escríbenos.</p>
+      </div>
+      <div class="press-grid">
+        <a class="press-item" href="descargas/soul-developer-logo.png" download>
+          <img src="img/chispa-128.png" alt="" width="64" height="64">
+          <span><b>Logo de Chispa</b><small>PNG transparente · 1254 px</small></span>
+        </a>
+        <a class="press-item" href="descargas/soul-developer-logo-borde.png" download>
+          <img src="img/chispa-128.png" alt="" width="64" height="64">
+          <span><b>Logo con borde</b><small>PNG · versión pequeña</small></span>
+        </a>
+        <a class="press-item" href="img/zoo-portada.webp" download>
+          <img src="img/zoo-icono.webp" alt="" width="64" height="64">
+          <span><b>Mi Zoológico</b><small>Imagen destacada 1024×500</small></span>
+        </a>
+        <a class="press-item" href="img/vaelor-portada.webp" download>
+          <img src="img/vaelor-icono.webp" alt="" width="64" height="64">
+          <span><b>Crónicas de Vaelor</b><small>Imagen destacada 1024×500</small></span>
+        </a>
+        <a class="press-item" href="img/hotel-portada.webp" download>
+          <img src="img/hotel-icono.webp" alt="" width="64" height="64">
+          <span><b>Idle Hotel Tycoon</b><small>Imagen destacada 1024×500</small></span>
+        </a>
+        <a class="press-item" href="img/patitas-portada.webp" download>
+          <img src="img/patitas-icono.webp" alt="" width="64" height="64">
+          <span><b>Patitas</b><small>Imagen destacada 1024×500</small></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="sec contact" id="contacto">
+    <div class="wrap contact-in">
+      <div>
+        <p class="eyebrow">Contacto</p>
+        <h2>Hablemos.</h2>
+        <p class="sec-sub">Soporte para jugadores, prensa, colaboraciones o publicación. Respondemos todos los correos.</p>
+        <ul class="reasons">
+          <li><b>Jugadores</b> Errores, ideas y ayuda con tu partida.</li>
+          <li><b>Prensa</b> Entrevistas, claves y material.</li>
+          <li><b>Socios</b> Publishers, marcas y colaboraciones.</li>
+        </ul>
+      </div>
+      <div class="mailbox">
+        <img src="img/chispa-128.png" alt="" width="72" height="72">
+        <span class="mail-label">Correo del estudio</span>
+        <a class="mail" id="mail" href="mailto:souldevelopercompany@gmail.com">souldevelopercompany@gmail.com</a>
+        <button class="btn btn-fire" id="copyMail" type="button">Copiar correo</button>
+        <span class="copied" id="copied" aria-live="polite"></span>
+      </div>
+    </div>
+  </section>
 </main>
-<footer>
-  Hecho con cariño por <b>Soul Developer Company</b> ·
-  <a href="https://souldevelopercompany.github.io/mi-zoologico-privacidad/">Política de privacidad</a> ·
-  <a href="mailto:souldevelopercompany@gmail.com">Contacto</a>
+
+<footer class="footer">
+  <div class="wrap foot-in">
+    <a class="brand" href="#inicio">
+      <img src="img/chispa-128.png" alt="" width="36" height="36">
+      <span class="brand-name">Soul<b>Developer</b></span>
+    </a>
+    <nav class="foot-nav" aria-label="Pie de página">
+      <a href="#juegos">Juegos</a><a href="#estudio">Estudio</a><a href="#prensa">Prensa</a><a href="#contacto">Contacto</a>
+    </nav>
+    <nav class="foot-nav foot-priv" aria-label="Políticas de privacidad">
+      <span>Privacidad:</span>
+      <a href="https://souldevelopercompany.github.io/mi-zoologico-privacidad/">Mi Zoológico</a>
+      <a href="https://souldevelopercompany.github.io/cronicas-de-vaelor-privacidad/">Crónicas de Vaelor</a>
+      <a href="https://souldevelopercompany.github.io/idle-hotel-privacidad/">Idle Hotel Tycoon</a>
+    </nav>
+    <p class="foot-legal">© 2026 Soul Developer Company. Hecho en Colombia con mucho café.<br>Google Play y el logotipo de Google Play son marcas de Google LLC.</p>
+  </div>
 </footer>
+
+<dialog class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose" aria-label="Cerrar">×</button>
+  <img id="lbImg" src="" alt="">
+  <p id="lbCap"></p>
+</dialog>
+
+<script src="js/main.js"></script>
 </body>
 </html>
